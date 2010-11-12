@@ -7,8 +7,8 @@ void testApp::setup()
 
 	Sensing::getInstance()->setListener(this);
 	
-	eyes.push_back( new Eye("lefteye_pix.png", "leftpoint_pix.png", ofPoint(30, 40)));
-	eyes.push_back( new Eye("righteye_pix.png", "rightpoint_pix.png", ofPoint(300, 40)));
+	eyes.push_back( new Eye("lefteye.png", "leftpoint.png", ofPoint(30, 40)));
+	eyes.push_back( new Eye("righteye.png", "rightpoint.png", ofPoint(300, 40)));
 }
 
 void testApp::update() 
@@ -55,17 +55,15 @@ void testApp::mouseReleased() {}
 
 void testApp::blobOn( int x, int y, int id, int order ) 
 {		
-	cout << "Blob on" << endl;
+	cout << "Blob on: " << id << endl;
 }
 
 void testApp::blobMoved(int x, int y, int id, int order)
 {
-	//cout << "something moved: " << id << endl;
+	cout << "Blob moved: " << id << endl;
 	
 	//if(id == 1)
 	//{
-		//cout << "0 moved" << endl;
-		
 		float xNorm = (float) x / (float) ofGetWidth();
 		float yNorm = (float) y / (float) ofGetHeight();
 		
@@ -76,7 +74,7 @@ void testApp::blobMoved(int x, int y, int id, int order)
 
 void testApp::blobOff( int x, int y, int id, int order ) 
 {	
-	cout << "Blob off" << endl;
+	cout << "Blob off: " << id << endl;
 }
 
 
