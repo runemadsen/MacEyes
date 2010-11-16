@@ -37,7 +37,6 @@
 		A56B88021292ECBD005058B4 /* Eyes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A56B88011292ECBD005058B4 /* Eyes.cpp */; };
 		A5AE616C1148304E00EA4B00 /* Sensing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5AE615D1148304E00EA4B00 /* Sensing.cpp */; };
 		A5D15DA31289F43400397F57 /* ofxCvHaarFinder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5D15DA11289F43400397F57 /* ofxCvHaarFinder.cpp */; };
-		A5D15E241289F80C00397F57 /* Eye.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5D15E231289F80C00397F57 /* Eye.cpp */; };
 		A5EEF12C1289FC8A0087A60F /* tinyxml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5EEF1251289FC8A0087A60F /* tinyxml.cpp */; };
 		A5EEF12D1289FC8A0087A60F /* tinyxmlerror.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5EEF1271289FC8A0087A60F /* tinyxmlerror.cpp */; };
 		A5EEF12E1289FC8A0087A60F /* tinyxmlparser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5EEF1281289FC8A0087A60F /* tinyxmlparser.cpp */; };
@@ -210,8 +209,6 @@
 		A5BFA0A711483BC4005E142F /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = touchParticles/Constants.h; sourceTree = "<group>"; };
 		A5D15DA11289F43400397F57 /* ofxCvHaarFinder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxCvHaarFinder.cpp; sourceTree = "<group>"; };
 		A5D15DA21289F43400397F57 /* ofxCvHaarFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxCvHaarFinder.h; sourceTree = "<group>"; };
-		A5D15E221289F80C00397F57 /* Eye.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Eye.h; sourceTree = "<group>"; };
-		A5D15E231289F80C00397F57 /* Eye.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Eye.cpp; sourceTree = "<group>"; };
 		A5EEF1231289FC8A0087A60F /* install.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = install.xml; sourceTree = "<group>"; };
 		A5EEF1251289FC8A0087A60F /* tinyxml.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinyxml.cpp; sourceTree = "<group>"; };
 		A5EEF1261289FC8A0087A60F /* tinyxml.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tinyxml.h; sourceTree = "<group>"; };
@@ -756,8 +753,6 @@
 				A5AE615E1148304E00EA4B00 /* Sensing.h */,
 				E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */,
 				E4B69E1F0A3A1BDC003C02F2 /* testApp.h */,
-				A5D15E221289F80C00397F57 /* Eye.h */,
-				A5D15E231289F80C00397F57 /* Eye.cpp */,
 				A56B88001292ECBD005058B4 /* Eyes.h */,
 				A56B88011292ECBD005058B4 /* Eyes.cpp */,
 			);
@@ -955,7 +950,6 @@
 				A55682461148300900CE398F /* ofxQuaternion.cpp in Sources */,
 				A5AE616C1148304E00EA4B00 /* Sensing.cpp in Sources */,
 				A5D15DA31289F43400397F57 /* ofxCvHaarFinder.cpp in Sources */,
-				A5D15E241289F80C00397F57 /* Eye.cpp in Sources */,
 				A5EEF12C1289FC8A0087A60F /* tinyxml.cpp in Sources */,
 				A5EEF12D1289FC8A0087A60F /* tinyxmlerror.cpp in Sources */,
 				A5EEF12E1289FC8A0087A60F /* tinyxmlparser.cpp in Sources */,

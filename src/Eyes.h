@@ -1,7 +1,6 @@
 #pragma once
 
 #include "ofMain.h"
-#include "Eye.h"
 #include "Constants.h"
 
 class Eyes
@@ -9,7 +8,7 @@ class Eyes
 	
 public:
 	
-	Eyes();
+	Eyes(float scale, float xPos, float yPos);
 	void draw();
 	void look(float normX, float normY);
 	
@@ -17,8 +16,18 @@ public:
 	
 private:
 	
-	vector <Eye *> eyes;
-	ofPoint lastPos;
+	ofImage _leftEye;
+	ofImage _leftIris;
+	ofImage _rightEye;
+	ofImage _rightIris;
+	
+	ofPoint _loc;
+	ofPoint _faceLocNorm;
+	
+	ofRectangle _leftIrisArea;
+	ofRectangle _rightIrisArea;
+	
+	float _scale;
 };
 
 	

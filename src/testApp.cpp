@@ -2,7 +2,7 @@
 
 void testApp::setup() 
 {
-	eyes = new Eyes();
+	eyes = new Eyes(1, 50, 20);
 	
 	ofSetFrameRate(60);
 	ofBackground( 0, 0, 0 );
@@ -18,10 +18,13 @@ void testApp::update()
 	{
 		ofxCvTrackedBlob& blob = Sensing::getInstance()->blobTracker.blobs[i];
 		
+		cout << blob.centroid.x << endl;
+		
 		if(blob.id == eyes->assignedID)
 		{
-			float xNorm = (float) blob.centroid.x / (float) ofGetWidth();
-			float yNorm = (float) blob.centroid.y / (float) ofGetHeight();
+			// is blob centroid normalized?
+			float xNorm = (float) blob.centroid.x / (float) CAM_WIDTH;
+			float yNorm = (float) blob.centroid.y / (float) CAM_HEIGHT;
 			
 			eyes->look(xNorm, yNorm);
 		}

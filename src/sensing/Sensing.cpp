@@ -76,7 +76,7 @@ void Sensing::update()
 	if( vidGrabber.isFrameNew() ) 
 	{
         colorImg = vidGrabber.getPixels();
-        //colorImg.mirror(false, false);
+        colorImg.mirror(false, true);
 		grayImg = colorImg;
 		//grayImg.blur(blurAmount);
         //grayImg.threshold(threshold);
