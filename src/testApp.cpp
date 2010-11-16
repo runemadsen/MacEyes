@@ -2,26 +2,37 @@
 
 void testApp::setup() 
 {
+	eyes = new Eyes();
+	
 	ofSetFrameRate(60);
 	ofBackground( 0, 0, 0 );
 
 	Sensing::getInstance()->setListener(this);
-	
-	eyes.push_back( new Eye("lefteye.png", "leftpoint.png", ofPoint(30, 40)));
-	eyes.push_back( new Eye("righteye.png", "rightpoint.png", ofPoint(300, 40)));
 }
 
 void testApp::update() 
 {	
 	Sensing::getInstance()->update();
+	
+	for(int i = 0; i < Sensing::getInstance()->blobTracker.blobs.size(); i++)
+	{
+		ofxCvTrackedBlob& blob = Sensing::getInstance()->blobTracker.blobs[i];
+		
+		if(blob.id == eyes->assignedID)
+		{
+			float xNorm = (float) blob.centroid.x / (float) ofGetWidth();
+			float yNorm = (float) blob.centroid.y / (float) ofGetHeight();
+			
+			eyes->look(xNorm, yNorm);
+		}
+	}
 }
 
 void testApp::draw() 
 {	
 	ofSetColor(255, 255, 255);
 	
-	eyes[0]->draw();
-	eyes[1]->draw();
+	eyes->draw();
 	
 	Sensing::getInstance()->draw();
 	
@@ -56,25 +67,26 @@ void testApp::mouseReleased() {}
 void testApp::blobOn( int x, int y, int id, int order ) 
 {		
 	cout << "Blob on: " << id << endl;
+	
+	if (eyes->assignedID == DISABLED) 
+	{
+		eyes->assignedID = id;
+	}
 }
 
 void testApp::blobMoved(int x, int y, int id, int order)
 {
-	cout << "Blob moved: " << id << endl;
-	
-	//if(id == 1)
-	//{
-		float xNorm = (float) x / (float) ofGetWidth();
-		float yNorm = (float) y / (float) ofGetHeight();
-		
-		eyes[0]->look(xNorm, yNorm);
-		eyes[1]->look(xNorm, yNorm);
-	//}
+	//cout << "Blob moved: " << id << endl;
 }
 
 void testApp::blobOff( int x, int y, int id, int order ) 
 {	
 	cout << "Blob off: " << id << endl;
+	
+	if (eyes->assignedID == id) 
+	{
+		eyes->assignedID = DISABLED;
+	}
 }
 
 

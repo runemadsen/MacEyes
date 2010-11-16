@@ -4,7 +4,7 @@
 #include "ofxCvConstants_Track.h"
 #include "Sensing.h"
 #include "Constants.h"
-#include "Eye.h"
+#include "Eyes.h"
 
 class testApp : public ofSimpleApp, public ofxCvBlobListener 
 {
@@ -24,6 +24,6 @@ class testApp : public ofSimpleApp, public ofxCvBlobListener
     void blobMoved( int x, int y, int id, int order );
     void blobOff( int x, int y, int id, int order );
 	
-	vector <Eye *> eyes;
+	Eyes * eyes;
 };
 

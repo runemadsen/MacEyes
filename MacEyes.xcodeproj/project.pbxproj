@@ -34,6 +34,7 @@
 		A55682441148300900CE398F /* ofxMatrix3x3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A55682111148300900CE398F /* ofxMatrix3x3.cpp */; };
 		A55682451148300900CE398F /* ofxMatrix4x4.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A55682131148300900CE398F /* ofxMatrix4x4.cpp */; };
 		A55682461148300900CE398F /* ofxQuaternion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A55682181148300900CE398F /* ofxQuaternion.cpp */; };
+		A56B88021292ECBD005058B4 /* Eyes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A56B88011292ECBD005058B4 /* Eyes.cpp */; };
 		A5AE616C1148304E00EA4B00 /* Sensing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5AE615D1148304E00EA4B00 /* Sensing.cpp */; };
 		A5D15DA31289F43400397F57 /* ofxCvHaarFinder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5D15DA11289F43400397F57 /* ofxCvHaarFinder.cpp */; };
 		A5D15E241289F80C00397F57 /* Eye.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5D15E231289F80C00397F57 /* Eye.cpp */; };
@@ -202,6 +203,8 @@
 		A556821C1148300900CE398F /* ofxVec4f.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxVec4f.h; sourceTree = "<group>"; };
 		A556821D1148300900CE398F /* ofxVectorMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxVectorMath.h; sourceTree = "<group>"; };
 		A556822C1148300900CE398F /* MacEyesDebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacEyesDebug.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A56B88001292ECBD005058B4 /* Eyes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Eyes.h; sourceTree = "<group>"; };
+		A56B88011292ECBD005058B4 /* Eyes.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Eyes.cpp; sourceTree = "<group>"; };
 		A5AE615D1148304E00EA4B00 /* Sensing.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Sensing.cpp; path = sensing/Sensing.cpp; sourceTree = "<group>"; };
 		A5AE615E1148304E00EA4B00 /* Sensing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Sensing.h; path = sensing/Sensing.h; sourceTree = "<group>"; };
 		A5BFA0A711483BC4005E142F /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = touchParticles/Constants.h; sourceTree = "<group>"; };
@@ -755,6 +758,8 @@
 				E4B69E1F0A3A1BDC003C02F2 /* testApp.h */,
 				A5D15E221289F80C00397F57 /* Eye.h */,
 				A5D15E231289F80C00397F57 /* Eye.cpp */,
+				A56B88001292ECBD005058B4 /* Eyes.h */,
+				A56B88011292ECBD005058B4 /* Eyes.cpp */,
 			);
 			path = src;
 			sourceTree = SOURCE_ROOT;
@@ -956,6 +961,7 @@
 				A5EEF12E1289FC8A0087A60F /* tinyxmlparser.cpp in Sources */,
 				A5EEF12F1289FC8A0087A60F /* ofxXmlSettings.cpp in Sources */,
 				A5EEF1381289FCA10087A60F /* ofxMSAInteractiveObject.cpp in Sources */,
+				A56B88021292ECBD005058B4 /* Eyes.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
