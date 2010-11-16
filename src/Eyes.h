@@ -12,7 +12,8 @@ public:
 	void draw();
 	void look(float normX, float normY);
 	
-	int assignedID;
+	void assignID(int aid) { assignedID = aid; }
+	int getAssignedID() { return assignedID; }
 	
 private:
 	
@@ -28,6 +29,8 @@ private:
 	ofRectangle _rightIrisArea;
 	
 	float _scale;
+	
+	int assignedID;
 };
 
 	

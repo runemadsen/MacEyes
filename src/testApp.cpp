@@ -20,7 +20,7 @@ void testApp::update()
 		
 		cout << blob.centroid.x << endl;
 		
-		if(blob.id == eyes->assignedID)
+		if(blob.id == eyes->getAssignedID())
 		{
 			// is blob centroid normalized?
 			float xNorm = (float) blob.centroid.x / (float) CAM_WIDTH;
@@ -71,9 +71,9 @@ void testApp::blobOn( int x, int y, int id, int order )
 {		
 	cout << "Blob on: " << id << endl;
 	
-	if (eyes->assignedID == DISABLED) 
+	if (eyes->getAssignedID() == DISABLED) 
 	{
-		eyes->assignedID = id;
+		eyes->assignID(id);
 	}
 }
 
@@ -86,9 +86,9 @@ void testApp::blobOff( int x, int y, int id, int order )
 {	
 	cout << "Blob off: " << id << endl;
 	
-	if (eyes->assignedID == id) 
+	if (eyes->getAssignedID() == id) 
 	{
-		eyes->assignedID = DISABLED;
+		eyes->assignID(DISABLED);
 	}
 }
 
