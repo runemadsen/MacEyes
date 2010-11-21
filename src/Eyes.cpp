@@ -2,6 +2,9 @@
 
 Eyes::Eyes(float scale, float xPos, float yPos)
 {
+	_timer.state = 0;
+	_timer.duration = 100;
+	
 	_scale = scale;
 	
 	_loc.set(xPos, yPos);
@@ -39,11 +42,22 @@ Eyes::Eyes(float scale, float xPos, float yPos)
 
 void Eyes::draw()
 {	
-	ofFill();
+	_timer.tick();
 	
-	/*ofSetColor(255, 0, 0);
-	ofRect(_leftIrisArea.x, _leftIrisArea.y, _leftIrisArea.width, _leftIrisArea.height);
-	ofRect(_rightIrisArea.x, _rightIrisArea.y, _rightIrisArea.width, _rightIrisArea.height);*/
+	if(assignedID == BYPASS && _timer.time == _timer.duration)
+	{
+		assignedID = DISABLED;
+		
+		_timer.state = 0;
+		_timer.time = 0;
+	}
+	
+	if(assignedID == BYPASS || assignedID == DISABLED)
+	{
+		//look(0.5, 0.5);
+	}
+	
+	ofFill();
 	
 	ofSetColor(255, 255, 255);
 	
@@ -73,4 +87,19 @@ void Eyes::look(float normX, float normY)
 		_faceLocNorm.x = normX;
 		_faceLocNorm.y = normY;
 	}
+}
+
+/* ID assignment
+__________________________________________________________________ */
+
+void Eyes::assignID(int aid) 
+{ 
+	assignedID = aid; 
+}
+
+void Eyes::removeID()
+{
+	assignedID = BYPASS;
+	
+	_timer.state = 1;
 }

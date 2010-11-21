@@ -2,6 +2,7 @@
 
 #include "ofMain.h"
 #include "Constants.h"
+#include "Tools.h"
 
 class Eyes
 {
@@ -12,7 +13,8 @@ public:
 	void draw();
 	void look(float normX, float normY);
 	
-	void assignID(int aid) { assignedID = aid; }
+	void assignID(int aid);
+	void removeID();
 	int getAssignedID() { return assignedID; }
 	
 private:
@@ -31,6 +33,8 @@ private:
 	float _scale;
 	
 	int assignedID;
+	
+	Timer _timer;
 };
 
 	

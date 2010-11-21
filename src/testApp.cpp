@@ -14,19 +14,34 @@ void testApp::update()
 {	
 	Sensing::getInstance()->update();
 	
-	for(int i = 0; i < Sensing::getInstance()->blobTracker.blobs.size(); i++)
+	if(eyes->getAssignedID() == DISABLED && Sensing::getInstance()->blobTracker.blobs.size() > 0)
 	{
-		ofxCvTrackedBlob& blob = Sensing::getInstance()->blobTracker.blobs[i];
+		ofxCvTrackedBlob& blob = Sensing::getInstance()->blobTracker.blobs[0];
 		
-		cout << blob.centroid.x << endl;
+		float xNorm = (float) blob.centroid.x / (float) CAM_WIDTH;
+		float yNorm = (float) blob.centroid.y / (float) CAM_HEIGHT;
 		
-		if(blob.id == eyes->getAssignedID())
+		//cout << "Setting blob from draw function normx: " << xNorm << " normy: " << yNorm << endl;
+		
+		eyes->assignID(blob.id);
+		eyes->look(xNorm, yNorm);
+	}
+	else 
+	{
+		for(int i = 0; i < Sensing::getInstance()->blobTracker.blobs.size(); i++)
 		{
-			// is blob centroid normalized?
-			float xNorm = (float) blob.centroid.x / (float) CAM_WIDTH;
-			float yNorm = (float) blob.centroid.y / (float) CAM_HEIGHT;
+			ofxCvTrackedBlob& blob = Sensing::getInstance()->blobTracker.blobs[i];
 			
-			eyes->look(xNorm, yNorm);
+			if(blob.id == eyes->getAssignedID())
+			{
+				// is blob centroid normalized?
+				float xNorm = (float) blob.centroid.x / (float) CAM_WIDTH;
+				float yNorm = (float) blob.centroid.y / (float) CAM_HEIGHT;
+				
+				//cout << "Updating blob from draw normx: " << xNorm << " normy: " << yNorm << endl;
+				
+				eyes->look(xNorm, yNorm);
+			}
 		}
 	}
 }
@@ -88,7 +103,7 @@ void testApp::blobOff( int x, int y, int id, int order )
 	
 	if (eyes->getAssignedID() == id) 
 	{
-		eyes->assignID(DISABLED);
+		eyes->removeID();
 	}
 }
 

@@ -209,6 +209,7 @@
 		A5BFA0A711483BC4005E142F /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = touchParticles/Constants.h; sourceTree = "<group>"; };
 		A5D15DA11289F43400397F57 /* ofxCvHaarFinder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxCvHaarFinder.cpp; sourceTree = "<group>"; };
 		A5D15DA21289F43400397F57 /* ofxCvHaarFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxCvHaarFinder.h; sourceTree = "<group>"; };
+		A5EE307C1299B1FA00F11345 /* Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tools.h; sourceTree = "<group>"; };
 		A5EEF1231289FC8A0087A60F /* install.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = install.xml; sourceTree = "<group>"; };
 		A5EEF1251289FC8A0087A60F /* tinyxml.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinyxml.cpp; sourceTree = "<group>"; };
 		A5EEF1261289FC8A0087A60F /* tinyxml.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tinyxml.h; sourceTree = "<group>"; };
@@ -755,6 +756,7 @@
 				E4B69E1F0A3A1BDC003C02F2 /* testApp.h */,
 				A56B88001292ECBD005058B4 /* Eyes.h */,
 				A56B88011292ECBD005058B4 /* Eyes.cpp */,
+				A5EE307C1299B1FA00F11345 /* Tools.h */,
 			);
 			path = src;
 			sourceTree = SOURCE_ROOT;

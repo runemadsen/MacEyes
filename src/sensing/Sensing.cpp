@@ -49,7 +49,7 @@ Sensing::Sensing()
 	gui.addContent("Input", outputTexture);
 	gui.addSlider("Threshold", threshold , 0.0, 255);
 	gui.addSlider("Bluring", blurAmount , 0, 40);
-	gui.addContent("Difference", grayImg);
+	//gui.addContent("Difference", grayImg);
 	gui.addToggle("Mask", maskToggle);
 	gui.addToggle("Debug", debugToggle);
 	gui.show();
